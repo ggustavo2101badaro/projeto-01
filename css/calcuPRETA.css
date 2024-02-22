@@ -1,0 +1,149 @@
+/* @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Satisfy&family=Sixtyfour&display=swap");*/
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Satisfy&family=Sixtyfour&family=Workbench&display=swap");
+/*  font mais digital q achei
+ @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Pixelify+Sans:wght@400..700&family=Roboto:
+ ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;
+ 1,900&family=Satisfy&family=Sixtyfour&family=Workbench&display=swap');  
+ */
+
+/*👆 Acima encontramos as fontes fornecidas pelo "https://fonts.google.com/" que 
+ mudarão o visual de certas palavras no corpo HTML*/
+
+/*O seletor/asterisco abaixo irá estilizar toda 
+ a página web(de forma generalizada) que está linkada a esses comandos CSS */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: center;
+}
+
+/*Abaixo temos as declarações do seletor html*/
+body {
+  background-image: linear-gradient(90deg, rgb(20, 20, 20), rgb(126, 185, 37));
+}
+
+/*👇Propriedades do seletor com id de nome "resposta".
+ É onde estilizamos o local em que é mostrado a resposta na calculadora*/
+#resposta {
+  padding-top: 50px;
+  padding-right: 30px;
+  width: 270px;
+  height: 90px;
+  background-color: olive;
+  margin-left: 11px;
+  margin-right: 10px;
+  border-radius: 10px;
+  transform: translate(-3%, -20%);
+  font-size: 50px;
+  text-align: right;
+  position: sticky;
+  /*ABAIXO SEGUE O COMANDO PARA QUE A 
+   RESPOSTA SEJA FEITA EM LINHA.
+   DE FORMA QUE SEJA POSSÍVEL VER O FINAL DA DÍZIMA PERIÓDICA(SE FINITA)*/
+  overflow-y: auto;
+  /*👇 fonte de letra retirada*/
+  /* font-family:"Pixelify Sans", sans-serif ;*/
+}
+
+/*O visual de "GUSCUladora" é modificado aqui*/
+.nometopcalcu {
+  padding-top: 10px;
+  color: white;
+  font-family: "Workbench", sans-serif;
+  font-size: 40px;
+  margin-left: -5px;
+  color: rgb(228, 228, 228);
+  margin-bottom: 20%;
+  color: rgb(199, 197, 197);
+}
+
+/*O estilo da 2ª div foi mudado aqui. Possui classe de nome"calculadora"*/
+.calculadora {
+  padding-right: 5px;
+  padding-left: 22px;
+  position: absolute;
+  background-color: rgb(20, 20, 20);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -45%);
+  border-radius: 20px;
+  border-bottom: 10px;
+  border-style: ridge;
+  border-color: rgb(44, 44, 44);
+}
+
+/*Comando para que o símbolo de dentro do botão fique de cor verde*/
+.corverde {
+  color: rgb(126, 185, 37);
+}
+
+/*deixa alguns símbolos dos botões da calculadora de cor branca*/
+.white {
+  color: white;
+}
+
+/*Estiliza todos os botões de forma generalizada*/
+button {
+  background-color: rgb(29, 29, 29);
+  opacity: 0.9;
+  width: 100%;
+  height: 100%;
+  font-size: 30px;
+  border-radius: 40px;
+  margin: 0.5px;
+}
+
+/*Muda o aspecto dos botões ao passar o mause por cima deles*/
+button:hover {
+  background-color: rgb(0, 0, 0);
+}
+
+/*muda a altura e a largura do contém dentro do elemento 
+"tr"(os "td",ou seja, os botões)*/
+td {
+  height: 50px;
+  width: 70px;
+}
+
+/*o id de nome "mudacor" dá cor ao botão que tem a função de apagar
+parcialmente o que é emitido no visor da calculadora*/
+#mudacor {
+  background-color: darkred;
+  color: white;
+}
+
+/*o id "mudacor" com acréscimo de ":hover" indica para mudar de cor quando
+passar o mouse por cima do botão de símbolo "←"*/
+#mudacor:hover {
+  background-color: rgb(204, 0, 0);
+}
+/*estilo do botão "="*/
+#mudacor1 {
+  background-color: rgb(126, 185, 37);
+  color: white;
+}
+/*muda o botão "=" quando passar o mouse por cima*/
+#mudacor1:hover {
+  background-color: greenyellow;
+  color: rgb(177, 175, 175);
+}
+
+/*Propriedades do quadrado que avisa os botões 
+que não estão funcionando no momento */
+#laranja {
+  background-color: orangered;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  margin-left: 40px;
+  margin-top: 20%;
+  border-radius: 0%;
+}
+
+/*para que seja possível ver a pág. web por completo*/
+h1 {
+  margin-top: 1%;
+}

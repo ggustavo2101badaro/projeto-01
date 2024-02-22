@@ -1,0 +1,205 @@
+<!--Doctype: indica o tipo de html que deve ser "lido" pelo computador-->
+<!DOCTYPE html>
+<!--tag de abertura html. Também podemos escolher
+a língua usada(inglês, português etc.)-->
+<html lang="en">
+ <!--container ou cabeça do corpo HTML.Contém as informações básicas  da página. 
+E nela também podemos linkar o próprio arquivo HTML a outros arquivos-->
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!--Nome que é mostrado na aba da página web-->
+    <title>Calcu do GU preta</title>
+
+    <!--comando que linka ao arquivo CSS na pasta CSS-->
+    <link rel="stylesheet" href="css/calcuPRETA.css">
+   
+    <!--comando que linka ao arquivo JS na pasta JS-->
+    <script src="js/calcuPRETA.js" defer></script>
+  </head>
+
+
+
+<!--O corpo HTML. Nele terá o conteúdo visto pelo usuário web.-->
+  <body>
+
+<!--primeira div. Dentro dela temos as demais div's, que contém o título,
+a tabela que organiza os botões da calculadora, e o visor da calculadora. -->
+    <div>
+<!--Título no topo da página web-->
+      <h1 style="color: rgba(255, 255, 255, 0.904)">
+        Calculadora Gustavo S. Badaró
+      </h1>
+<!--2ª div-->
+      <div class="calculadora">
+
+<!--Título de dentro da calculadora(seria sua marca)-->
+        <h1 class="nometopcalcu">GUSCUladora</h1>
+        
+<!--Parágrafo reservado para ser o visor da calculadora, mostra a resposta
+das operações.-->
+        <p id="resposta"></p>
+
+<!--Tabela que organiza os botões da calculadora por 
+meio das tag's "tr" e "td" -->        
+        <table
+          style="
+            background-color: rgb(20, 20, 20);
+            border-radius: 100px;
+            padding: 10px;">
+         
+<!--Aqui começa a 1ª linha de botões da calculadora. Os td's indicam a 
+ordem em que aparecem os botões na linha-->
+         <tr>
+           
+            <td colspan="2">
+              <button class="corverde" onclick="insert('/100')">%</button>
+            </td>
+            <td>
+              <button
+                style="
+                  color: rgb(204, 9, 9);
+                  font-family: 'Gill Sans', 'Gill Sans MT', Calibri,
+                    'Trebuchet MS', sans-serif;
+                  text-align: center;">
+                <strong style="font-size: 30px" onclick="apagar('')">C</strong>
+              </button>
+            </td>
+
+            <td>
+              <button id="mudacor" 
+              onclick="apagaso1()" >←</button>
+            </td>
+          </tr>
+
+
+<!--Aqui começa a 2ª linha de botões da calculadora-->
+          <tr>  
+            <td>
+              <button class="white" onclick="insert('1/')" >1/×</button>
+            </td>
+            <td>
+              <button onclick="insert('²')" 
+              style="color: black;background-color:orangered;">
+                ×²
+              </button>
+              </td>
+            <td>
+              <button  
+              style="
+              color: black;font-size: 20px;background-color: orangered;" 
+              onclick="insert('Raiz')" >
+              Raiz
+            </button>
+          </td>
+           <td>
+              <button class="corverde" onclick="insert('/')">
+                <strong>÷</strong>
+              </button>
+            </td>
+          </tr>
+
+<!--Aqui começa a 3ª linha de botões da calculadora-->
+          <tr>
+            <td><button class="white" onclick="insert('7')">7</button></td>
+            <td><button class="white" onclick="insert('8')">8</button></td>
+            <td><button class="white" onclick="insert('9')">9</button></td>
+            <td>
+              <button class="white" style=
+              "color: rgb(126, 185, 37)"
+               onclick="insert('*')">×</button>
+            </td>
+          </tr>
+
+<!--Aqui começa a 4ª linha de botões da calculadora-->          
+          <tr>
+            <td>
+              <button class="white" onclick="insert('4')">4</button>
+            </td>
+            <td>
+              <button class="white" onclick="insert('5')">5</button>
+            </td>
+            <td>
+              <button class="white" onclick="insert('6')">6</button>
+            </td>
+            <td>
+              <button
+                class="white"
+                style="font-size: 40px; color: rgb(126, 185, 37)"
+              onclick="insert('-')" >
+              -
+            </button>
+            </td>
+          </tr>
+
+
+<!--Aqui começa a 5ª linha de botões da calculadora-->         
+          <tr>
+            <td>
+              <button class="white" onclick="insert('1')">1</button>
+            </td>
+            <td>
+              <button class="white" onclick="insert('2')">2</button>
+            </td>
+            <td>
+              <button class="white" onclick="insert('3')">3</button>
+            </td>
+            <td>
+              <button class="white" style="color: rgb(126, 185, 37)" 
+              onclick="insert('+')">+</button>
+            </td>
+          </tr>
+
+<!--Aqui começa a 6ª linha de botões da calculadora-->
+          <tr>
+           <td>
+            <button class="white" onclick="insert('.')">
+              <strong>.</strong>
+            </button>
+          </td>
+           <td>
+            <button class="white" onclick="insert('0')">0</button>
+          </td>
+            
+          <td colspan="2">
+              <button id="mudacor1"
+              onclick="resultado
+              ()" >
+                <strong>=</strong>
+              </button>
+            </td>
+         
+          </tr>
+
+<!--Final da tabela que organiza os botões-->
+        </table>
+  
+<!--Final da 2ª div-->      
+      </div>
+   
+<!--Final da 1ª div-->        
+    </div>
+
+ 
+
+
+<!--abaixo encontra-se o botão de aviso e o aviso de "Em Manutenção"-->      
+<button id="laranja">
+</button><strong style="
+  font-size: 20px;display: flex;align-items: end;color: white;
+  "> 
+  <strong style="
+  color: gray;font-size: 60px;margin-left: 64px;padding-bottom: 20px;
+  ">↓ 
+<!--Parágrafo para aparecer na linha de baixo de forma estética, o aviso-->
+<p>
+</strong>Em Manutenção</strong> 
+</p>
+      
+
+    
+<!--Tag's de fechamento do corpo HTML e da estrutura HTML-->
+
+  </body>
+</html>
